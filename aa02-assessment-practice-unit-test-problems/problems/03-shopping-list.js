@@ -43,5 +43,7 @@ addToClothesList('shoes');
 
 console.log(clothesList); // ['tshirt', 'pants']
 
+//& Callback functions
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = shoppingList;
