@@ -19,12 +19,25 @@ console.log(cat); // { name: "Willie", color: "orange", toy: "yarn" }
 // If not, add this key-value pair to the object.
 // return the mutated object.
 
+// function keyAdderUniqueVal(object, key, value) {
+// 	const values = new Set(Object.values(object)); // Here, the Object.values(object) method takes ALL of the enumerable values from the object provided as an argument and puts them into an array. //^ Then the new Set() method creates a new 'set' object using the values from that array. A Set is a built-in object that stores unique values, automatically removing any duplicates. So when you pass an array of object values to the Set construtor, it creates a new Set that contains only uniqeu values from the object.
+// 	if (!values.has(value)) { //This conditional checks to see IF the 'values' array does NOT (notice the "!" operator) contain the value that was provided as an argument.
+// 		object[key] = value; //IF it does not, then that value is assigned to the object with the key that was also provided as an argument.
+// 	}
+// 	return object //Finally, we return the mutated array.
+// }
+
+//!---------------------------------------------------------
+
 function keyAdderUniqueVal(object, key, value) {
-	const values = new Set(Object.values(object)); // Here, the Object.values(object) method takes ALL of the enumerable values from the object provided as an argument and puts them into an array. //^ Then the new Set() method creates a new 'set' object using the values from that array. A Set is a built-in object that stores unique values, automatically removing any duplicates. So when you pass an array of object values to the Set construtor, it creates a new Set that contains only uniqeu values from the object.
-	if (!values.has(value)) { //This conditional checks to see IF the 'values' array does NOT (notice the "!" operator) contain the value that was provided as an argument.
-		object[key] = value; //IF it does not, then that value is assigned to the object with the key that was also provided as an argument.
+
+	let values = Object.values(object); //Returns the values of the object as an array
+
+	if (!values.includes(value)) { //check to see IF the current value is already located in the array
+		object[key] = value; //if not, add it to the object corresponding to the current key
 	}
-	return object //Finally, we return the mutated array.
+
+	return object;
 }
 
 let cat = { name: 'Willie', color: 'orange' };

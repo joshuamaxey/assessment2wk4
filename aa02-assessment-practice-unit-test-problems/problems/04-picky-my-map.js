@@ -15,18 +15,22 @@ pickyMyMap(booleans, (boolean) => !boolean); // [true, true]
 You may not use Array's `map()`, `filter()`, or `forEach()` methods.
 ***********************************************************************/
 
-function pickyMyMap(arr, cb) {
-	let newArr = []; // initialize a new array to hold the results of each call to the callback function
+// function pickyMyMap(arr, cb) {
+// 	let newArr = []; // initialize a new array to hold the results of each call to the callback function
 
-	for (let i = 0; i < arr.length; i++) { // write a for loop to iterate through each element of the array
-		let cbResult = cb(arr[i]); //call the cb function on the element located at the current index of the array, then assign the result to the variable "cbResult"
+// 	for (let i = 0; i < arr.length; i++) { // write a for loop to iterate through each element of the array
+// 		let cbResult = cb(arr[i]); //call the cb function on the element located at the current index of the array, then assign the result to the variable "cbResult"
 
-		if (cbResult) { // This if statement checks to see if the value returned by calling the cb function on the element located at the current index of the array is truthy or falsey. IF it is truthy...
-			newArr.push(cbResult); // ...then the result of calling the callback function on the element located at teh current index of the array is pushed to the newArr
-		}
-	}
-	return newArr;
-}
+// 		if (cbResult) { // This if statement checks to see if the value returned by calling the cb function on the element located at the current index of the array is truthy or falsey. IF it is truthy...
+// 			newArr.push(cbResult); // ...then the result of calling the callback function on the element located at teh current index of the array is pushed to the newArr
+// 		}
+// 	}
+// 	return newArr;
+// }
+
+//!-----------------------------------------------------------------------------------------------------------------------------
+
+
 
 const nums = [1, 2, 3, 4];
 console.log(pickyMyMap(nums, (num) => num - 2)); // [-1, 1, 2]
