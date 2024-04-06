@@ -30,7 +30,20 @@ You may not use Array's `map()`, `filter()`, or `forEach()` methods.
 
 //!-----------------------------------------------------------------------------------------------------------------------------
 
+function pickyMyMap(arr, cb) {
+	let resultArr = []
 
+	for (let i = 0; i < arr.length; i++) {
+
+		let el = arr[i]
+		let cbResult = cb(el);
+
+		if (cbResult) { //Check to see if the value is truthey
+			resultArr.push(cbResult);
+		}
+	}
+	return resultArr;
+};
 
 const nums = [1, 2, 3, 4];
 console.log(pickyMyMap(nums, (num) => num - 2)); // [-1, 1, 2]
