@@ -31,13 +31,13 @@ console.log(cat); // { name: "Willie", color: "orange", toy: "yarn" }
 
 function keyAdderUniqueVal(object, key, value) {
 
-	let values = Object.values(object);
+	let values = Object.values(object); // use the object.values method to return an ARRAY of the object's values, initialize a new variable 'values' to hold that array.
 
-	if (!values.includes(value)) {
-		object[key] = value;
+	if (!values.includes(value)) { //write a conditional to check whether the value provided as an argument is already present within the 'values' array that we created using the Object.values method.
+		object[key] = value; // If the value given as an argument is NOT already present within the array of values created by using the Object.values method on the array provided as an argument, then we use BRACKET NOTATION to add the key-value pair to the object.
 	}
 
-	return object;
+	return object; //return the mutated object
 }
 
 let cat = { name: 'Willie', color: 'orange' };
