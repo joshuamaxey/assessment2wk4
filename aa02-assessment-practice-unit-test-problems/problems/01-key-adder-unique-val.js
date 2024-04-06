@@ -31,10 +31,10 @@ console.log(cat); // { name: "Willie", color: "orange", toy: "yarn" }
 
 function keyAdderUniqueVal(object, key, value) {
 
-	let values = Object.values(object); //Returns the values of the object as an array
+	let values = Object.values(object);
 
-	if (!values.includes(value)) { //check to see IF the current value is already located in the array
-		object[key] = value; //if not, add it to the object corresponding to the current key
+	if (!values.includes(value)) {
+		object[key] = value;
 	}
 
 	return object;
@@ -48,6 +48,10 @@ console.log(cat); // { name: "Willie", color: "orange", toy: "yarn" }
 //& object.values method
 //& Set object
 //& .has method
+
+//!-----------------------------------------------------------------------------------------------------------------------------
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = keyAdderUniqueVal;
