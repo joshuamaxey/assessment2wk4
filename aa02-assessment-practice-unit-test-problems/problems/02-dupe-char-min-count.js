@@ -25,6 +25,11 @@ duplicateCharMinCount("What about a longer string?", 3) // ["a", "t", " "]
 // 	return charCount
 // }
 
+// function duplicateCharMinCount(string, minCount) {
+// 	const charCount = countCharacters(string);
+// 	return Object.keys(charCount).filter(char => charCount[char] >= minCount);
+// }
+
 //!------------------------------------------------------------------------------------------------------------------------------
 
 function countCharacters(string) {
@@ -56,14 +61,12 @@ function duplicateCharMinCount(string, minCount) {
 	return arr
 }
 
-function duplicateCharMinCount(string, minCount) {
-	const charCount = countCharacters(string);
-	return Object.keys(charCount).filter(char => charCount[char] >= minCount);
-}
+console.log(duplicateCharMinCount("apple", 2)); // ["p"]
+console.log(duplicateCharMinCount("banana", 2)); // ["a", "n"]
+console.log(duplicateCharMinCount("What about a longer string?", 3)); // ["a", "t", " "]
 
 //&Object.keys method
 //& for...of loop
-
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = duplicateCharMinCount;
