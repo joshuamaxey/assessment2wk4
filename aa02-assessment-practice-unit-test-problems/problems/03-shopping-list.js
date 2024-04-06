@@ -33,9 +33,22 @@ console.log(clothesList); // ['tshirt', 'pants']
 
 //!------------------------------------------------------------------------------------------------------------------------------
 
+function shoppingList(list) {
 
+  return function(arg) { //could use (...args) rest parameter
+    list.push(arg) // and (...args) spread syntax, to take an indefinite number of new elements (items) at one time
 
+    return list;
+  }
+
+}
+
+const groceryList = ['eggs']
+const addToGroceryList = shoppingList(groceryList); // returns a function
+
+addToGroceryList('maple syrup'); // returns ['eggs', 'maple syrup']
 addToGroceryList("brisket");
+
 console.log(groceryList)
 
 const clothesList = []
