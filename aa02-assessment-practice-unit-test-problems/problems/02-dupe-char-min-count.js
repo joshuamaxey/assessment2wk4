@@ -33,10 +33,10 @@ duplicateCharMinCount("What about a longer string?", 3) // ["a", "t", " "]
 //!------------------------------------------------------------------------------------------------------------------------------
 
 function countCharacters(string) {
-	let count = {};
+	let count = {}; // initialize a new variable 'count' to hold the characters (keys) of the string and their count (value).
 
-	for (let i = 0; i < string.length; i++) {
-		let char = string[i];
+	for (let i = 0; i < string.length; i++) { //write a for loop that iterates through the string
+		let char = string[i]; // initialize a new variable to hold the character (element) located at the current index of the string.
 
 		if (count[char] === undefined) {
 			count[char] = 1;
